@@ -70,35 +70,28 @@
 
    <div id="webchat" style="width: 100%; height: 500px;"></div>
 
- <script>
-  const script = document.createElement("script");
-  script.src = "https://cdn.botpress.cloud/webchat/v3.0/inject.js";
-  script.async = true;
-  script.onload = function () {
-    window.botpressWebChat.init({
+<script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+  <script>
+    window.botpress.init({
       botId: "9a061772-77cf-43e5-9710-625ee67fbe0f",
       clientId: "da334d94-67c6-4839-9581-e08e908587f0",
-      hostUrl: "https://cdn.botpress.cloud/webchat/v3",
-      messagingUrl: "https://messaging.botpress.cloud",
-      botName: "Marisela",
-      avatarUrl: "https://jabolab.github.io/mariselaasist/img/avatar_Marisela.jpeg",
-      containerWidth: "100%",
-      layoutWidth: "400px",
-      themeName: "prism",
-      theme: "light",
-      stylesheet: "",
-      conversationDescription: "Asistente virtual sobre historia y memoria",
-      themeVariables: {
-        colorPrimary: "#7C2B2B",
-        colorBackground: "#FDF9F2",
-        borderRadius: "16px",
-        fontFamily: "Georgia, serif"
+      selector: "#webchat",
+      configuration: {
+        version: "v1",
+        botName: "Marisela"
+        avatarUrl: "./img/avatar_Marisela.jpeg",
+        themeMode: "light",
+        color: "#7C2B2B",
+        radius: 4,
+        fontFamily: "Georgia, serif",
+        headerVariant: "glass",
+        feedbackEnabled: false,
+        footer: "Una producción de Julián Javier Labra Ramos"
       }
     });
-  };
-  document.head.appendChild(script);
+    </script>
    
-</script>
+
   
   <footer>
     <p>Una producción de Julián Javier Labra Ramos • 2025</p>
