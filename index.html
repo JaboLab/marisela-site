@@ -72,14 +72,13 @@
 
 <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
   <script>
-   window.botpressWebChat.init({
-    botId: "9a061772-77cf-43e5-9710-625ee67fbe0f",
-    clientId: "da334d94-67c6-4839-9581-e08e908587f0",
-    selector: "#webchat",
-    hostUrl: "https://cdn.botpress.cloud/webchat/v1",
-    messagingUrl: "https://messaging.botpress.cloud",
-    lazySocket: true      
-    footer: "Una producción de Julián Javier Labra Ramos"
+   window.botpress.init({
+      botId: "9a061772-77cf-43e5-9710-625ee67fbe0f",
+      clientId: "da334d94-67c6-4839-9581-e08e908587f0",
+      selector: "#webchat",
+      configuration: {
+      version: "v1",
+      footer: "Una producción de Julián Javier Labra Ramos"
       });
     </script>
    
