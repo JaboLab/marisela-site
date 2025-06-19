@@ -1,157 +1,152 @@
-/* Layout & component styles for Marisela – Voz con Memoria */
-
-/* Reset & base */
-* {
+/* marisela-layout.css */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Lora', serif;
-  scroll-behavior: smooth;
-  line-height: 1.65;
+  font-family: var(--fuente-principal);
   background-color: var(--color-fondo);
-  color: var(--color-texto-principal);
+  color: var(--color-texto);
 }
 
-h1, h2, h3 {
-  font-family: 'Lora', serif;
-  font-weight: 700;
-}
-
-/* Header */
 header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 64px;
-  background-color: #7C2B2B;
-  color: #FDF9F2;
+  background-color: var(--color-principal);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.2rem;
-  z-index: 1000;
-}
-
-header img {
-  height: 48px;
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
+  padding: 1rem 2rem;
 }
 
 nav a {
   color: #FDF9F2;
-  font-weight: 600;
   text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #D8B28C;
-  transition: width 0.3s ease;
+  margin-left: 1rem;
 }
 
 nav a:hover {
-  color: #D8B28C;
+  color: var(--color-piel);
+  border-bottom: 2px solid var(--color-piel);
 }
 
-nav a:hover::after {
-  width: 100%;
-}
-
-/* Responsive Navigation */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 0.8rem 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  header img {
-    margin-bottom: 0.5rem;
-  }
-}
-
-/* Anchor jump offset */
-section[id] {
-  scroll-margin-top: 80px;
-}
-
-/* Section spacing */
-section {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 90px 20px 60px;
-  text-align: justify;
-}
-
-/* Hero block */
 .hero {
   text-align: center;
+  padding: 100px 20px 60px;
 }
 
 .hero img {
-  width: 220px;
-  max-width: 60%;
+  max-width: 200px;
   border-radius: 50%;
-  box-shadow: 0 4px 14px rgba(0,0,0,.15);
 }
 
-.hero h1 {
-  font-size: 1.8rem;
-  margin: 24px 0;
-}
-
-/* Buttons */
 .boton {
+  background-color: var(--color-secundario);
+  color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 24px;
-  padding: 12px 26px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 20px;
+  margin-top: 20px;
   cursor: pointer;
-  transition: filter .25s ease;
 }
 
-.boton:hover,
-.boton:focus {
-  filter: brightness(0.9);
-}
-
-/* Chat embed */
-#chat-embed {
-  width: 100%;
-  height: 500px;
-  border: none;
-  background: var(--color-blanco);
-  box-shadow: 0 4px 12px rgba(0,0,0,.1);
-  border-radius: 14px;
-}
-
-/* Footer */
 footer {
+  background-color: var(--color-principal);
+  color: white;
   text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
+  padding: 1rem;
+  margin-top: 40px;
+}
+
+
+/* Header mejorado para Marisela */
+header {
+  background-color: var(--color-principal);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header img {
+  height: 60px;
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+nav a {
+  color: #FDF9F2;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-piel);
+  border-bottom: 2px solid var(--color-piel);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    margin: 0;
+  }
+
+  header img {
+    margin-bottom: 10px;
+  }
+}
+
+section {
+  padding: 100px 20px 60px;
+  max-width: 900px;
+  margin: auto;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-family: var(--fuente-secundaria, 'Inter', sans-serif);
+}
+
+h1, h2 {
+  font-family: var(--fuente-principal);
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+blockquote.marisela-bubble {
+  background-color: var(--color-fondo);
+  border-left: 5px solid var(--color-secundario);
+  padding: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  border-radius: 8px;
 }

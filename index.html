@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+ <style>
+  #webchat {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 500px;
+      height: 600px;
+    }
+ </style>
+ 
   <title>Marisela – Voz con Memoria</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" href="img/logo_Marisela_real.png" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/marisela-colors.css">
-  <link rel="stylesheet" href="css/marisela-layout.css">
+  <link rel="stylesheet" href="css/marisela-colors.css" />
+  <link rel="stylesheet" href="css/marisela-layout.css" />
 </head>
 <body>
   <header>
-    <img src="img/logo_Marisela_horizontal_transparente.png" alt="Logo Marisela" />
+    <img src="img/logo_Marisela_real.png" alt="Logo Marisela" />
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#quien-es-marisela">¿Quién es?</a>
@@ -23,9 +32,9 @@
   </header>
 
   <section id="inicio" class="hero">
-    <img src="img/avatar_Marisela.jpeg" alt="Avatar de Marisela" />
+    <img src="img/avatar_Marisela.jpeg" alt="Avatar Marisela" />
     <h1>«Marisela no está sola. Aquí comienza un diálogo desde la memoria, el conocimiento y la voz de las mujeres.»</h1>
-    <a href="#conversa" aria-label="Ir a conversatorio"><button class="boton">Habla con Marisela</button></a>
+    <a href="#conversa"><button class="boton">Habla con Marisela</button></a>
   </section>
 
   <section id="quien-es-marisela">
@@ -36,26 +45,48 @@
     <p>A través de la inteligencia artificial y el diálogo, Marisela busca sembrar preguntas, compartir saberes y mantener viva la memoria histórica de las mujeres. Porque la historia también se cuenta en voz de mujer.</p>
   </section>
 
-  <section id="conversa">
-    <h2>Conversa con Marisela</h2>
-    <p>Inicia un diálogo directo. Pregunta, comparte y descubre. El chat está disponible 24/7.</p>
-    <iframe id="chat-embed" title="Chat con Marisela" src="about:blank">Tu navegador no soporta iframes.</iframe>
+  <section id="conversa" class="conversa-section">
+    <h2>¿De qué puedes hablar con Marisela?</h2>
+    <blockquote class="marisela-bubble">
+      <p><strong>Marisela dice:</strong><br>
+      “Puedo contarte sobre mujeres de la Nueva España, el feminismo en México, las luchas sociales y culturales que marcaron nuestra historia.”</p>
+    </blockquote>
+    <p>Haz clic en el ícono del chat en la esquina inferior derecha para comenzar a conversar conmigo. Estoy disponible 24/7.</p>
   </section>
 
   <section id="fuentes">
     <h2>Fuentes y Referencias</h2>
-    <p>A continuación encontrarás la base documental que sustenta nuestras publicaciones. Cada entrada está formateada en estilo APA y, cuando es posible, enlazada a su versión en línea.</p>
     <ul style="margin-top:1rem; list-style: disc inside;">
-      <li>Mata Montes de Oca, M. C. (2015). <em>Mujeres en el límite del periodo virreinal</em>. En P. Galeana (Coord.), <em>Historia de las mujeres en México</em> (pp. 47–67). Instituto Nacional de Estudios Históricos de las Revoluciones de México.</li>
-      <li>Centro de Estudios de las Mujeres y Paridad de Género. (s.f.). <em>Mujeres que nos dieron independencia nacional</em>. H. Congreso del Estado de Oaxaca. Recuperado de https://www.congresooaxaca.gob.mx/...</li>
+      <li>Mata Montes de Oca, M. C. (2015). <em>Mujeres en el límite del periodo virreinal</em>. En P. Galeana (Coord.), <em>Historia de las mujeres en México</em>.</li>
+      <li>Centro de Estudios de las Mujeres y Paridad de Género. (s.f.). <em>Mujeres que nos dieron independencia nacional</em>.</li>
     </ul>
   </section>
 
   <section id="proyecto">
     <h2>Sobre el proyecto</h2>
-    <p><strong>Marisela V2.1</strong> es una iniciativa independiente impulsada por Julián Javier Labra Ramos. Su misión es consolidar un repositorio vivo, interactivo y participativo sobre la historia de las mujeres, apoyado en inteligencia artificial y curaduría académica rigurosa.</p>
+    <p><strong>Marisela</strong> es una iniciativa independiente impulsada por Julián Javier Labra Ramos. Su misión es consolidar un repositorio vivo, interactivo y participativo sobre la historia de las mujeres, apoyado en inteligencia artificial y curaduría académica rigurosa.</p>
     <p>Si quieres contribuir, colaborar o patrocinar, contáctanos vía <a href="mailto:contacto@marisela.mx">contacto@marisela.mx</a>.</p>
   </section>
+
+   <div id="webchat" style="width: 100%; height: 500px;"></div>
+
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+  <script>
+    window.botpress.init({
+      botId: "9a061772-77cf-43e5-9710-625ee67fbe0f",
+      clientId: "da334d94-67c6-4839-9581-e08e908587f0",
+      selector: "#webchat",
+      configuration: {
+        version: "v1",
+        themeMode: "light",
+        color: "#3276EA",
+        radius: 4,
+        headerVariant: "glass",
+        feedbackEnabled: false,
+        footer: "[⚡ by Botpress](https://botpress.com/?from=webchat)"
+      }
+    });
+    </script>
 
   <footer>
     <p>Una producción de Julián Javier Labra Ramos • 2025</p>
