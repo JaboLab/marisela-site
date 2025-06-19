@@ -70,29 +70,34 @@
 
    <div id="webchat" style="width: 100%; height: 500px;"></div>
 
- <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
-    botId: "9a061772-77cf-43e5-9710-625ee67fbe0f",
-    clientId: "da334d94-67c6-4839-9581-e08e908587f0",
-    hostUrl: "https://cdn.botpress.cloud/webchat/v3", 
-    messagingUrl: "https://messaging.botpress.cloud",
-    botName: "Marisela",
-    avatarUrl: "./img/avatar_Marisela.jpeg",
-    containerWidth: "100%",
-    layoutWidth: "400px",
-    themeName: "prism",
-    stylesheet: "",
-    theme: "light",
-    conversationDescription: "Asistente virtual con memoria histórica",
-    frontendVersion: "v3",
-    themeVariables: {
-      colorPrimary: "#7C2B2B", /* Vino profundo */
-      colorBackground: "#FDF9F2", /* Fondo pergamino */
-      borderRadius: "16px",
-      fontFamily: "Georgia, serif"
-    }
-  });
+ <script>
+  const script = document.createElement("script");
+  script.src = "https://cdn.botpress.cloud/webchat/v3.0/inject.js";
+  script.async = true;
+  script.onload = function () {
+    window.botpressWebChat.init({
+      botId: "9a061772-77cf-43e5-9710-625ee67fbe0f",
+      clientId: "da334d94-67c6-4839-9581-e08e908587f0",
+      hostUrl: "https://cdn.botpress.cloud/webchat/v3",
+      messagingUrl: "https://messaging.botpress.cloud",
+      botName: "Marisela",
+      avatarUrl: "https://jabolab.github.io/mariselaasist/img/avatar_Marisela.jpeg",
+      containerWidth: "100%",
+      layoutWidth: "400px",
+      themeName: "prism",
+      theme: "light",
+      stylesheet: "",
+      conversationDescription: "Asistente virtual sobre historia y memoria",
+      themeVariables: {
+        colorPrimary: "#7C2B2B",
+        colorBackground: "#FDF9F2",
+        borderRadius: "16px",
+        fontFamily: "Georgia, serif"
+      }
+    });
+  };
+  document.head.appendChild(script);
+   
 </script>
   
   <footer>
