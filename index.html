@@ -72,23 +72,29 @@
 
  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
 <script>
-  window.botpress.init({
+  window.botpressWebChat.init({
     botId: "9a061772-77cf-43e5-9710-625ee67fbe0f",
     clientId: "da334d94-67c6-4839-9581-e08e908587f0",
-    selector: "#webchat",
+    hostUrl: "https://cdn.botpress.cloud/webchat/v3", 
+    messagingUrl: "https://messaging.botpress.cloud",
     botName: "Marisela",
     avatarUrl: "./img/avatar_Marisela.jpeg",
-    conversationDescription: "Asistente informativo con perspectiva de género",
-    stylesheet: "", // si estás usando uno personalizado, aquí va el path
+    containerWidth: "100%",
+    layoutWidth: "400px",
+    themeName: "prism",
+    stylesheet: "",
     theme: "light",
+    conversationDescription: "Asistente virtual con memoria histórica",
+    frontendVersion: "v3",
     themeVariables: {
       colorPrimary: "#7C2B2B", /* Vino profundo */
-      borderRadius: "6px",
+      colorBackground: "#FDF9F2", /* Fondo pergamino */
+      borderRadius: "16px",
       fontFamily: "Georgia, serif"
     }
   });
 </script>
-
+  
   <footer>
     <p>Una producción de Julián Javier Labra Ramos • 2025</p>
   </footer>
